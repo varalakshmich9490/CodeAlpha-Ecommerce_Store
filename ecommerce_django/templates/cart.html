@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<h1>Shopping Cart</h1>
+
+<table border="1">
+<tr>
+    <th>Product</th>
+    <th>Price</th>
+</tr>
+
+<tr>
+    <td>Mobile</td>
+    <td>15000</td>
+</tr>
+
+</table>
+
+<br>
+<script>
+    document.getElementById("product").innerHTML=localStorage.getItem("product");
+    document.getElementById("price").innerHTML=localStorage.getItem("price");
+
+</script>
+
+<h2>Total = ₹15000</h2>
+
+<button onclick="checkout()" class="b1">Checkout</button>
+<script>
+    function checkout(){
+        alert("order placed successfully");
+    }
+</script>
+
+</body>
+</html> 
